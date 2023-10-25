@@ -19,3 +19,11 @@ Route::get('/', function () {
 
 
 Route::get('/collection','App\Http\Controllers\belajarCollectionController@controller');
+
+Route::get('/identitasMahasiswa','App\Http\Controllers\belajarCollectionController@identitasMahasiswa');
+
+Route::get('/restoran','App\Http\Controllers\belajarCollectionController@restoran');
+
+Route::get('/uangJajan','App\Http\Controllers\belajarCollectionController@uangJajan');
+
+Route::get('/matkul','App\Http\Controllers\belajarCollectionController@matkul');
