@@ -91,7 +91,7 @@ class belajarCollectionController extends Controller
 
         dd($taelah);
     }
-
+    
     public function matkul(){
         $dosen = collect([
             [
@@ -111,6 +111,41 @@ class belajarCollectionController extends Controller
         $bangke = collect($dosen)->groupBy("matkul")->all();
         dd($bangke);
         
+    }
+
+    public function collectionExample(){
+        // pada contoh dibawah ini akan menghasilkan nilai true
+            // $collect = collect([
+            //     ['nama'=> "budi"]
+            // ])->contains("nama" , "budi");
+
+        // pada contoh dibawah ini kan menghasilkan nilai false
+            $collect = collect([
+                "nama"=>"budi"
+            ])->contains('nama','budi');
+
+
+        dd($collect);
+    }
+
+    public function CombineContains(){
+        //  Combine
+                $combine = collect(["nama", "kelas"]);
+                $cobak = $combine->combine(['ridho',"4ka24"]);
+                dd($cobak);
+
+        // concat
+                $concat = collect(['ridho']);
+                $cobak = $concat->concat(['dimas'])->all();
+                dd($cobak);
+    }
+
+    public function crossJoin(){
+        $cross = collect(['baju','celana'])->crossJoin(['hitam','putih','merah'],['wangi','bau'])->all();
+
+        $cross = collect(['baju','celana']);
+        $cobak = $cross->crossJoin(['hitam','mearah'],['baru','bekas'])->all();
+         dd($cobak);
     }
 
 }

@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/collection','App\Http\Controllers\belajarCollectionController@controller');
+Route::get('/numerik','App\Http\Controllers\belajarCollectionController@controller');
 
 Route::get('/identitasMahasiswa','App\Http\Controllers\belajarCollectionController@identitasMahasiswa');
 
@@ -27,3 +27,9 @@ Route::get('/restoran','App\Http\Controllers\belajarCollectionController@restora
 Route::get('/uangJajan','App\Http\Controllers\belajarCollectionController@uangJajan');
 
 Route::get('/matkul','App\Http\Controllers\belajarCollectionController@matkul');
+
+Route::get('/collection','App\Http\Controllers\belajarCollectionController@collectionExample');
+
+Route::get('/containcombine','App\Http\Controllers\belajarCollectionController@CombineContains');
+
+Route::get('/crossJoin','App\Http\Controllers\belajarCollectionController@crossJoin');
